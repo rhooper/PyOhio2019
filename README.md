@@ -98,3 +98,6 @@ The REPL works like a standard Python prompt. Try the following:
 >>> 1+2
 3
 ```
+
+#### Attribution
+This repository is based on https://github.com/adafruit/PyCon2019
