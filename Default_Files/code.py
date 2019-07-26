@@ -9,7 +9,7 @@ TONE_PIANO = False
 
 # Set this as a float from 0 to 1 to change the brightness. The decimal represents a percentage.
 # So, 0.3 means 30% brightness!
-cpx.pixels.brightness = 0.3
+cpx.pixels.brightness = 0.1
 
 # Changes to NeoPixel state will not happen without explicitly calling show()
 cpx.pixels.auto_write = False
@@ -33,8 +33,14 @@ def color_wheel(pos):
     return (int(pos * 3), 0, int(255 - (pos*3)))
 
 
-# Digi-Key colors: red and white!
-digi_key_colors = ((255, 0, 0), (180, 180, 150))
+# Comet colors: purple and white!
+comet_colors = (
+    (15, 0, 40),
+    (25, 0, 50),
+    (42, 0, 66),
+    (63, 0, 100),
+    (200, 0, 255) 
+)
 # Python colors: blue and yellow!
 python_colors = ((32, 64, 255), (255, 180, 20))
 
@@ -45,10 +51,12 @@ start = time.monotonic()
 while True:
     now = time.monotonic()
     if board_id == 0:
-        # Flash Digi-Key colors!
-        if now - start > 0.5:
-            color_index = (color_index + 1) % len(digi_key_colors)
-            cpx.pixels.fill(digi_key_colors[color_index])
+        # Spin a purple and white comet
+        if now - start > 0.06:
+            cpx.pixels[pixel_number] = 0
+            pixel_number = (pixel_number + 1) % 10
+            for n in range(len(comet_colors)):
+                cpx.pixels[(pixel_number + n) % 10] = comet_colors[n]
             cpx.pixels.show()
             start = now
     elif board_id == 1:

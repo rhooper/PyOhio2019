@@ -1,18 +1,3 @@
-# PyCon2019
-This repo contains the CircuitPython Quickstart worksheet and example code for the PyCon 2019 
-Circuit Playground Express, sponsored by Digi-Key and Adafruit!
-
-Everyone will be receiving a Circuit Playground Express in their swag bag! Getting started with it
-requires a micro USB to USB cable. We will have a few for use during the CircuitPython Open Spaces,
-however we do not have enough for everyone. Beware of charge-only cables, they will not work for
-programming your Circuit Playground Express! **Please remember to bring a _DATA CAPABLE_ micro USB
-cable with you!**
-
-We will be hosting Open Spaces every day at PyCon, May 3 - May 5, 2019. We'll have this Quickstart
-available as a worksheet, including some examples on the back to get you started. This repo will
-have those examples and more available for you to try, play with, and modify. We'll also have some
-extras (servos, potentiometers and external NeoPixel strips) available for you to connect to
-your Circuit Playground Express.
 
 **The Adafruit Circuit Playground Express (CPX) has CircuitPython on board!** It’s a Microchip
 SAMD21 microcontroller running at 48 MHz, with 256kB flash, plus a 2MB external flash chip
